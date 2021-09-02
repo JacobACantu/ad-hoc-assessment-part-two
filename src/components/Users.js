@@ -1,5 +1,5 @@
-import React from 'react' 
-import User from './User'
+import React, {Fragment} from 'react' 
+import UserItem from './UserItem'
 
 const Users = ({users, showAddressInformation, showAddress}) => {
 
@@ -8,13 +8,13 @@ const Users = ({users, showAddressInformation, showAddress}) => {
     }
 
     return(
-        <div className = 'container'>
+        <Fragment>
             <h1> User Information</h1>
             <button className='showAddress-btn' onClick={handleShowAddress}>Show Address</button>
             {users.map(user => (
-                <User key={user.id} user={user} showAddress={showAddress}/>
+                <UserItem key={user.id} user={user} showAddress={showAddress}/>
             ))}
-        </div>
+        </Fragment>
     )
 }
 

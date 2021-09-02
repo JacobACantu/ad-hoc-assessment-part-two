@@ -1,7 +1,7 @@
 import React from 'react' 
 import Address from './Address'
 
-const User = ({user, showAddress}) => {
+const UserItem = ({user, showAddress}) => {
     return(
      <div className="container">
      <h1> Person Name: {user.name}</h1>
@@ -13,4 +13,4 @@ const User = ({user, showAddress}) => {
 }
 
 
-export default User
+export default UserItem
